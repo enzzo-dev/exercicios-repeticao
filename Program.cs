@@ -67,19 +67,19 @@ namespace exercicios_repeticao
             
               switch(estadoCivil){
                 case "Solteiro" :
-                  Console.WriteLine("Você é Solteiro!");
+                  Console.WriteLine($"Você é {estadoCivil}");
                 break;
 
                 case "Casado" :
-                  Console.WriteLine("Você é Solteiro!");
+                  Console.WriteLine($"Você é {estadoCivil}");
                 break;
 
                 case "Divorciado" :
-                  Console.WriteLine("Você é Solteiro!");
+                  Console.WriteLine($"Você é {estadoCivil}");
                 break;
 
                 case "Viuvo" :
-                  Console.WriteLine("Você é Solteiro!");
+                  Console.WriteLine($"Você é {estadoCivil}");
                 break;
 
                 default :
@@ -90,16 +90,15 @@ namespace exercicios_repeticao
             //Exercicio Extra
 
               int x=1, y=0, z=0;
-              Console.WriteLine("Digite o número de unidades que a sequencia de Fibonacci deve ter:  (Recomendado até 15)"); 
-              int n = int.Parse(Console.ReadLine());
-
-              for (int i = 0; i < n; i++)
+              int n = 17;
+              for (int i3 = 0; i3 < n; i3++)
               {
                   z = x + y;
                   y = x;
                   x = z;
                   Console.WriteLine(z);
               }
+              Console.WriteLine($" A sequencia de Fibonacci vai se repetir {n} vezes até chegar ao valor de {z} ultrapassando 500 como se pede o exercicio!"); 
               
         }
     }
