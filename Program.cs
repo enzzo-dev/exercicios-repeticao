@@ -43,11 +43,13 @@ namespace exercicios_repeticao
 
           //Exercicio 3
 
-              Console.WriteLine("Qual a seu nome?");
+              Console.WriteLine("Qual o seu nome?");
               string nome = Console.ReadLine();
-
-                if(nome == ""){
-                Console.WriteLine("Preencha as informações corretamente!");
+              while(nome == "")
+              {
+                Console.WriteLine("Seu nome não pode estar vazio!");
+                Console.WriteLine("Qual a seu nome?");
+                nome = Console.ReadLine();
               }
 
               Console.WriteLine("Qual a sua idade?");
@@ -87,20 +89,20 @@ namespace exercicios_repeticao
                 default :
                   Console.WriteLine("Preencha as informações corretamente!");
                 break;
-              }
+            }
 
             //Exercicio Extra
 
-              int x=1, y=0, z=0;
+              int numAtual=1, numAnt=0, prox=0;
               int n = 17;
               for (int i3 = 0; i3 < n; i3++)
               {
-                  z = x + y;
-                  y = x;
-                  x = z;
-                  Console.WriteLine(z);
+                  prox = numAtual + numAnt;
+                  numAnt = numAtual;
+                  numAtual = prox;
+                  Console.WriteLine(prox);
               }
-              Console.WriteLine($" A sequencia de Fibonacci vai se repetir {n} vezes até chegar ao valor de {z} ultrapassando 500 como se pede o exercicio!"); 
+              Console.WriteLine($" A sequencia de Fibonacci vai se repetir {n} vezes até chegar ao valor de {prox} ultrapassando 500 como se pede o exercicio!"); 
               
         }
     }
