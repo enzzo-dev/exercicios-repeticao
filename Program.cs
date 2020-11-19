@@ -75,7 +75,7 @@ namespace exercicios_repeticao
               Console.WriteLine("Qual seu estado civil?  C - Casado(a) , S - Solteiro(a) , V - viuvo(a) , D - divorciado(a) "); 
               string estadoCivil = Console.ReadLine();
 
-              while(estadoCivil != "c" && estadoCivil != "s" && estadoCivil != "v" && estadoCivil != "d")
+              while(estadoCivil.ToLower() != "c" && estadoCivil.ToLower() != "s" && estadoCivil.ToLower() != "v" && estadoCivil.ToLower() != "d")
               {
                   Console.WriteLine("Voce digitou incorretamente! Digite novamente dentro das opções disponiveis!");
                   System.Console.WriteLine("-----------------------------------------------------------------------------");
