@@ -26,18 +26,20 @@ namespace exercicios_repeticao
 
               int i = 0;
               string senha , usuario;
+              Console.WriteLine("Digite o nome de seu usuário: ");
+              usuario = Console.ReadLine();
+              Console.WriteLine("Digite a sua senha: ");
+              senha = Console.ReadLine();
               while(i < 1)
               {
-                  Console.WriteLine("Digite o nome de seu usuário: ");
-                  usuario = Console.ReadLine();
-                  Console.WriteLine("Digite a sua senha: ");
-                  senha = Console.ReadLine();
                   if(senha != usuario){
                       i++;
                   }else{
-                      Console.WriteLine("Senha precisa ser diferente de usuário!");
+                      Console.WriteLine("Digite a sua senha: ");
+                      senha = Console.ReadLine();
                   }
               } 
+               Console.WriteLine($"Usuário {usuario} cadastrado com sucesso!");
 
           //Exercicio 3
 
@@ -51,7 +53,7 @@ namespace exercicios_repeticao
               Console.WriteLine("Qual a sua idade?");
               int idade = int.Parse(Console.ReadLine());
 
-              if(idade < 1 || idade > 150 ){
+              if(idade < 1 || idade > 50 ){
                 Console.WriteLine("Há algo de errado!");
               }
 
