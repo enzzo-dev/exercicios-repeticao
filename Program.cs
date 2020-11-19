@@ -55,15 +55,21 @@ namespace exercicios_repeticao
               Console.WriteLine("Qual a sua idade?");
               int idade = int.Parse(Console.ReadLine());
 
-              if(idade < 1 || idade > 50 ){
-                Console.WriteLine("Há algo de errado!");
+              while(idade < 1 || idade > 90 ){
+                Console.WriteLine("Há algo de errado! Digite novamente: ");
+                System.Console.WriteLine("----------------------------");
+                Console.WriteLine("Qual a sua idade?");
+                idade = int.Parse(Console.ReadLine());
               }
 
               Console.WriteLine("Informe seu salário: ");
               float salario = float.Parse(Console.ReadLine());
 
-              if( salario < 1){
-                Console.WriteLine("Informações inseridas incorretamente!");
+              while( salario < 1){
+                Console.WriteLine("Informações inseridas incorretamente! Digite novamente: ");
+                System.Console.WriteLine("---------------------------------------------");
+                Console.WriteLine("Informe seu salário: ");
+                salario = float.Parse(Console.ReadLine());
               }
 
               Console.WriteLine("Qual seu estado civil? Casado(a) , Solteiro(a) , viuvo(a) , divorciado(a) "); 
