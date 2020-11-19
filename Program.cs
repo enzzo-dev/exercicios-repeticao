@@ -72,30 +72,16 @@ namespace exercicios_repeticao
                 salario = float.Parse(Console.ReadLine());
               }
 
-              Console.WriteLine("Qual seu estado civil? Casado(a) , Solteiro(a) , viuvo(a) , divorciado(a) "); 
+              Console.WriteLine("Qual seu estado civil?  C - Casado(a) , S - Solteiro(a) , V - viuvo(a) , D - divorciado(a) "); 
               string estadoCivil = Console.ReadLine();
-            
-              switch(estadoCivil){
-                case "Solteiro" :
-                  Console.WriteLine($"Você é {estadoCivil}");
-                break;
 
-                case "Casado" :
-                  Console.WriteLine($"Você é {estadoCivil}");
-                break;
-
-                case "Divorciado" :
-                  Console.WriteLine($"Você é {estadoCivil}");
-                break;
-
-                case "Viuvo" :
-                  Console.WriteLine($"Você é {estadoCivil}");
-                break;
-
-                default :
-                  Console.WriteLine("Preencha as informações corretamente!");
-                break;
-            }
+              while(estadoCivil != "c" && estadoCivil != "s" && estadoCivil != "v" && estadoCivil != "d")
+              {
+                  Console.WriteLine("Voce digitou incorretamente! Digite novamente dentro das opções disponiveis!");
+                  System.Console.WriteLine("-----------------------------------------------------------------------------");
+                  Console.WriteLine("Qual seu estado civil? C - Casado(a) , S - Solteiro(a) , V - viuvo(a) , D - divorciado(a) "); 
+                  estadoCivil = Console.ReadLine(); 
+              }
 
             //Exercicio Extra
 
@@ -108,7 +94,7 @@ namespace exercicios_repeticao
                   numAtual = prox;
                   Console.WriteLine(prox);
               }
-              Console.WriteLine($" A sequencia de Fibonacci vai se repetir {n} vezes até chegar ao valor de {prox} ultrapassando 500 como se pede o exercicio!"); 
+              // Console.WriteLine($" A sequencia de Fibonacci vai se repetir {n} vezes até chegar ao valor de {prox} ultrapassando 500 como se pede o exercicio!"); 
               
         }
     }
